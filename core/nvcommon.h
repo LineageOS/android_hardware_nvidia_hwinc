@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006 - 2017 NVIDIA Corporation.  All Rights Reserved.
+ * Copyright (c) 2006-2018 NVIDIA Corporation.  All Rights Reserved.
  *
  * NVIDIA Corporation and its licensors retain all intellectual property
  * and proprietary rights in and to this software, related documentation
@@ -7,6 +7,7 @@
  * distribution of this software and related documentation without an express
  * license agreement from NVIDIA Corporation is strictly prohibited.
  */
+
 #ifndef INCLUDED_NVCOMMON_H
 #define INCLUDED_NVCOMMON_H
 
@@ -18,20 +19,12 @@
  *    interfaces.
  */
 
-/// Include headers that provide NULL, size_t, offsetof, and [u]intptr_t.  In
-/// the event that the toolchain doesn't provide these, provide them ourselves.
-#include <stddef.h>
-#if defined(__hos__) || (defined(__linux__) && !defined(__KERNEL__)) || defined(__arm) || defined(__APPLE__) || defined(__QNX__) || defined(__INTEGRITY)
-#include <stdint.h>
-#endif
-
-#if defined(__cplusplus)
-extern "C"
-{
-#endif
-
 /**
+ * @if SWDOCS_VB_LNX_G3
+ * @defgroup nvcommon Core Library: Common Declarations
+ * @else
  * @defgroup nvcommon Common Declarations
+ * @endif
  *
  * Contains standard definitions used by various interfaces.
  *
@@ -39,173 +32,40 @@ extern "C"
  * @{
  */
 
+// Pull in some headers that are mirrored from desktop.
+#include "nvtypes.h"
 
-/// OS-related defines.
-#if defined(_WIN32) && !defined(NVOS_IS_WINDOWS)
-  #define NVOS_IS_WINDOWS 1
-
-#elif defined(__linux__)
-  #if !defined(NVOS_IS_LINUX)
-    #define NVOS_IS_LINUX 1
-    #define NVOS_IS_UNIX 1
-    #if defined(__KERNEL__)
-      #error nvcommon.h no longer supports the Linux kernel
-    #endif
-  #endif
-#elif defined(__QNX__) || defined(__QNXNTO__)
-  #define NVOS_IS_UNIX 1
-  #define NVOS_IS_QNX 1
-#elif defined(__hos__)
-  #define NVOS_IS_HOS 1
-#elif defined(__INTEGRITY)
-#define NVOS_IS_INTEGRITY 1
-#elif defined(__arm__)  && defined(__ARM_EABI__)
-    /* GCC arm eabi compiler, potentially used for kernel compilation without
-     * __linux__, but also for straight EABI (AOS) executable builds */
-#  if defined(__KERNEL__)
-#    error nvcommon.h no longer supports the Linux kernel
-#  endif
-    /* Nothing to define for AOS */
-#elif defined(__arm)
-  /// For ARM RVDS compiler, we don't know the final target OS at compile time.
-#elif defined(__APPLE__)
-# define NVOS_IS_DARWIN 1
-# define NVOS_IS_UNIX 1
-#else
-  #error Unknown OS
+/// Include headers that provide NULL, size_t, offsetof, and [u]intptr_t.  In
+/// the event that the toolchain doesn't provide these, provide them ourselves.
+#include <stddef.h>
+#if defined(__hos__) || (defined(__linux__) && !defined(__KERNEL__)) || defined(__arm) || defined(__APPLE__) || defined(__QNX__) || defined(__INTEGRITY)
+#include <stdint.h>
 #endif
 
-#if !defined(NVOS_IS_WINDOWS)
-#define NVOS_IS_WINDOWS 0
-#endif
-
-#if !defined(NVOS_IS_LINUX)
-#define NVOS_IS_LINUX 0
-#endif
-#if !defined(NVOS_IS_UNIX)
-#define NVOS_IS_UNIX 0
-#endif
-#if !defined(NVOS_IS_INTEGRITY)
-#define NVOS_IS_INTEGRITY 0
-#endif
-#if !defined(NVOS_IS_LINUX_KERNEL)
-#define NVOS_IS_LINUX_KERNEL 0
-#endif
-#if !defined(NVOS_IS_QNX)
-#define NVOS_IS_QNX 0
-#endif
-#if !defined(NVOS_IS_HOS)
-#define NVOS_IS_HOS 0
-#endif
-
-/// CPU-related defines.
-#if defined(_M_IX86) || defined(__i386__) || defined(__x86_64__)
-#define NVCPU_IS_X86 1 // any 32-bit or 64-bit x86 system
-#define NVCPU_MIN_PAGE_SHIFT 12
-#elif defined(_M_ARM) || defined(__arm__)
-#define NVCPU_IS_ARM 1
-#define NVCPU_MIN_PAGE_SHIFT 12
-#elif defined(__aarch64__) || defined(__ARM64__)
-#define NVCPU_IS_AARCH64 1
-#define NVCPU_MIN_PAGE_SHIFT 12
-#else
-#error Unknown CPU
-#endif
-#if !defined(NVCPU_IS_X86)
-#define NVCPU_IS_X86 0
-#endif
-#if !defined(NVCPU_IS_ARM)
-#define NVCPU_IS_ARM 0
-#endif
-#if !defined(NVCPU_IS_AARCH64)
-#define NVCPU_IS_AARCH64 0
-#endif
+// Rest of this file is mobile-only definitions, and appending to them
+// is discouraged since it prevents header portability between mobile
+// and desktop.
+#define NV_FORCE_INLINE NV_FORCEINLINE
+#define NV_ALIGN NV_ALIGN_BYTES
 
 #if (NVCPU_IS_X86 && NVOS_IS_WINDOWS)
-#define NVOS_IS_WINDOWS_X86 1
+#   define NVOS_IS_WINDOWS_X86 1
 #else
-#define NVOS_IS_WINDOWS_X86 0
+#   define NVOS_IS_WINDOWS_X86 0
 #endif
 
-#if (NVCPU_IS_ARM || NVCPU_IS_AARCH64)
-#define NVCPU_IS_FAMILY_ARM 1
-#else
-#define NVCPU_IS_FAMILY_ARM 0
-#endif
-/// The minimum page size can be determined from the minimum page shift.
-#define NVCPU_MIN_PAGE_SIZE (1 << NVCPU_MIN_PAGE_SHIFT)
-
-/// We don't currently support any big-endian CPUs.
-#define NVCPU_IS_BIG_ENDIAN 0
-
-/// Detect whether the system is 64-bit.
-#if defined(__x86_64__) || NVCPU_IS_AARCH64
-#define NVCPU_IS_64_BITS 1
-#else
-#define NVCPU_IS_64_BITS 0
+#if defined(__APPLE__)
+#  define NVOS_IS_DARWIN 1
+#  define NVOS_IS_UNIX 1
 #endif
 
-/// Explicitly sized signed and unsigned ints.
-typedef unsigned char      NvU8;  /**< 0 to 255 */
-typedef unsigned short     NvU16; /**< 0 to 65535 */
-typedef unsigned int       NvU32; /**< 0 to 4294967295 */
-typedef unsigned long long NvU64; /**< 0 to 18446744073709551615 */
-typedef signed char        NvS8;  /**< -128 to 127 */
-typedef signed short       NvS16; /**< -32768 to 32767 */
-typedef signed int         NvS32; /**< -2147483648 to 2147483647 */
-typedef signed long long   NvS64; /**< 2^-63 to 2^63-1 */
-
-/// Explicitly sized floats.
-typedef float              NvF32; /**< IEEE Single Precision (S1E8M23) */
-typedef double             NvF64; /**< IEEE Double Precision (S1E11M52) */
+#define NVOS_IS_LINUX_KERNEL 0
 
 /// Min/Max values for NvF32
 #define NV_MIN_F32  (1.1754944e-38f)
 #define NV_MAX_F32  (3.4028234e+38f)
 
-/* Explanation of the current form of these limits:
- *
- * - Decimal is used, as hex values are by default positive.
- * - Casts are not used, as usage in the preprocessor itself (#if) ends poorly.
- * - The subtraction of 1 for some MIN values is used to get around the fact
- *   that the C syntax actually treats -x as NEGATE(x) instead of a distinct
- *   number.  Since 214748648 isn't a valid positive 32-bit signed value, we
- *   take the largest valid positive signed number, negate it, and subtract 1.
- */
-#define NV_S8_MIN       (-128)
-#define NV_S8_MAX       (+127)
-#define NV_U8_MIN       (0U)
-#define NV_U8_MAX       (+255U)
-#define NV_S16_MIN      (-32768)
-#define NV_S16_MAX      (+32767)
-#define NV_U16_MIN      (0U)
-#define NV_U16_MAX      (+65535U)
-#define NV_S32_MIN      (-2147483647 - 1)
-#define NV_S32_MAX      (+2147483647)
-#define NV_U32_MIN      (0U)
-#define NV_U32_MAX      (+4294967295U)
-#define NV_S64_MIN      (-9223372036854775807LL - 1LL)
-#define NV_S64_MAX      (+9223372036854775807LL)
-#define NV_U64_MIN      (0ULL)
-#define NV_U64_MAX      (+18446744073709551615ULL)
-
-/// Boolean type
-#ifndef NV_TRUE
-typedef NvU8 NvBool;
-#define NV_TRUE           ((NvBool)(0 == 0))
-#define NV_FALSE          ((NvBool)(0 != 0))
-#endif
-
-/// Pointer-sized signed and unsigned ints
-#if NVCPU_IS_64_BITS
-typedef NvU64 NvUPtr;
-typedef NvS64 NvSPtr;
-#else
-typedef NvU32 NvUPtr;
-typedef NvS32 NvSPtr;
-#endif
-
-/// Declare a 64-bit aligned pointer
+/// Declares a 64-bit aligned pointer.
 #if defined(__GNUC__)
 #define NV_ALIGN_POINTER_NAME(f) f##Align
 #define NV_ALIGN_POINTER(t, f)                  \
@@ -219,13 +79,11 @@ typedef NvS32 NvSPtr;
  */
 #define NV_ALIGN_POINTER(t, f) t f
 #endif
+
 /// Function attributes are lumped in here too.
-/// INLINE - Make the function inline.
 /// NAKED - Create a function without a prologue or an epilogue.
 #if NVOS_IS_WINDOWS
 
-#define NV_INLINE __inline
-#define NV_FORCE_INLINE __forceinline
 #define NV_NAKED __declspec(naked)
 #define NV_LIKELY(c)   (c)
 #define NV_UNLIKELY(c) (c)
@@ -236,24 +94,18 @@ typedef NvS32 NvSPtr;
 #endif
 
 #elif defined(__ghs__) // GHS COMP
-#define NV_INLINE inline
-#define NV_FORCE_INLINE inline
 #define NV_NAKED
 #define NV_LIKELY(c)   (c)
 #define NV_UNLIKELY(c) (c)
 #define NV_UNUSED __attribute__((unused))
 
 #elif defined(__GNUC__)
-#define NV_INLINE __inline__
-#define NV_FORCE_INLINE __attribute__((always_inline)) __inline__
 #define NV_NAKED __attribute__((naked))
 #define NV_LIKELY(c)   __builtin_expect((c),1)
 #define NV_UNLIKELY(c) __builtin_expect((c),0)
 #define NV_UNUSED __attribute__((unused))
 
 #elif defined(__arm) // ARM RVDS compiler
-#define NV_INLINE __inline
-#define NV_FORCE_INLINE __forceinline
 #define NV_NAKED __asm
 #define NV_LIKELY(c)   (c)
 #define NV_UNLIKELY(c) (c)
@@ -264,25 +116,22 @@ typedef NvS32 NvSPtr;
 #endif
 
 /// Symbol attributes.
-/// ALIGN - Variable declaration to a particular # of bytes (should always be a
-///         power of two)
 /// WEAK  - Define the symbol weakly so it can be overridden by the user.
 #if NVOS_IS_WINDOWS
-#define NV_ALIGN(size) __declspec(align(size))
 #define NV_WEAK
 #elif defined(__ghs__)
-#define NV_ALIGN(size) __align(size)
 #define NV_WEAK __attribute__((weak))
 #elif defined(__GNUC__)
-#define NV_ALIGN(size) __attribute__ ((aligned (size)))
 #define NV_WEAK __attribute__((weak))
 #elif defined(__arm)
-#define NV_ALIGN(size) __align(size)
 #define NV_WEAK __weak
 #else
 #error Unknown compiler
 #endif
 
+// NV_DEBUG_CODE conflicts with the definition of the same name
+// in OpenGL/nvInc/nvDebug.h.
+#if !defined(NV_DEBUG_CODE)
 /**
  * This macro wraps its argument with the equivalent of "#if NV_DEBUG", but
  * also can be used where "#ifdef"'s can't, like inside a macro.
@@ -291,6 +140,7 @@ typedef NvS32 NvSPtr;
 #define NV_DEBUG_CODE(x) x
 #else
 #define NV_DEBUG_CODE(x)
+#endif
 #endif
 
 /** Macro for determining the size of an array */
@@ -304,10 +154,16 @@ typedef NvS32 NvSPtr;
 #define NV_MAX(a,b) (((a) > (b)) ? (a) : (b))
 #endif
 
-/** Macro for determining offset of element e in struct s */
-#define NV_OFFSETOF(s,e)        ((NvUPtr)(&(((s*)0)->e)))
+/** Macro for determining the offset of "member" in "type". */
+#if !defined(NV_OFFSETOF)
+    #if defined(__GNUC__)
+        #define NV_OFFSETOF(type, member)   __builtin_offsetof(type, member)
+    #else
+        #define NV_OFFSETOF(type, member)   ((NvUPtr)(&(((type *)0)->member)))
+    #endif
+#endif
 
-/** Macro for determining sizeof an element e in struct s */
+/** Macro for determining the size of an element e in struct s. */
 #define NV_SIZEOF(s,e)          (sizeof(((s*)0)->e))
 
 /** Get just the lowest bit of the 32 bit number */
@@ -364,6 +220,19 @@ typedef union NvData32Rec
     NvS32 i;
     NvF32 f;
 } NvData32;
+
+/**
+ * Generic data representation for both 32 and 64 bits data
+ */
+typedef union NvData64Rec
+{
+    NvU32 u;
+    NvS32 i;
+    NvF32 f;
+    NvU64 u64;
+    NvS64 i64;
+    NvF64 d;
+} NvData64;
 
 /**
  * This structure is used to determine a location on a 2-dimensional object,
@@ -432,11 +301,6 @@ typedef struct NvSizeRec
     /* height of the surface in pixels */
     NvS32 height;
 } NvSize;
-
-
-#if defined(__cplusplus)
-}
-#endif
 
 /** @} */
 #endif // INCLUDED_NVCOMMON_H
