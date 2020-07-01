@@ -1,3 +1,31 @@
+/*
+ * Copyright (c) 2019 NVIDIA Corporation.  All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *  * Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  * Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *  * Neither the name of NVIDIA CORPORATION nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS ``AS IS'' AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
+ * OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
 #ifndef NVBOOT_SDRAM_PARAM_GENERATED_H
 #define NVBOOT_SDRAM_PARAM_GENERATED_H
 typedef struct NvBootSdramParamsRec
@@ -122,7 +150,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 ClkRstEmcMisc;
 
     /// Auto-calibration of EMC pads
-    /// 
+    ///
     /// Specifies the value for EMC_AUTO_CAL_INTERVAL
     NvU32 EmcAutoCalInterval;
     /// Specifies the value for EMC_AUTO_CAL_CONFIG
@@ -193,7 +221,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcTimingControlWait;
 
     /// Timing parameters required for the SDRAM
-    /// 
+    ///
     /// Specifies the value for EMC_RC
     NvU32 EmcRc;
     /// Specifies the value for EMC_RFC
@@ -340,7 +368,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcTRefBw;
 
     /// FBIO configuration values
-    /// 
+    ///
     /// Specifies the value for EMC_FBIO_CFG5
     NvU32 EmcFbioCfg5;
     /// Specifies the value for EMC_FBIO_CFG7
@@ -384,7 +412,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcCfgRsv;
 
     /// MRS command values
-    /// 
+    ///
     /// Specifies the value for EMC_MRS
     NvU32 EmcMrs;
     /// Specifies the MP0 command to initialize mode registers
@@ -436,7 +464,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcMrsWaitCnt2;
 
     /// EMC miscellaneous configurations
-    /// 
+    ///
     /// Specifies the value for EMC_CFG
     NvU32 EmcCfg;
     /// Specifies value for EMC_RESET_PAD_CTRL
@@ -597,7 +625,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcOdtWrite;
 
     /// Periodic ZQ calibration
-    /// 
+    ///
     /// Specifies the value for EMC_ZCAL_INTERVAL
     /// Value 0 disables ZQ calibration
     NvU32 EmcZcalInterval;
@@ -607,7 +635,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcZcalMrwCmd;
 
     /// DRAM initialization sequence flow control
-    /// 
+    ///
     /// Specifies the MRS command value for resetting DLL
     NvU32 EmcMrsResetDll;
     /// Specifies the command for ZQ initialization of device 0
@@ -664,7 +692,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 EmcCfgDigDllPeriodWarmBoot;
 
     /// Pad controls
-    /// 
+    ///
     /// Specifies the value for PMC_VDDP_SEL
     NvU32 MssAonVddpSel;
     /// Specifies the wait time after programming PMC_VDDP_SEL
@@ -892,7 +920,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 McRegifBroadcast2;
 
     /// DRAM size information
-    /// 
+    ///
     /// Specifies the value for MC_EMEM_ADR_CFG
     NvU32 McEmemAdrCfg;
     /// Specifies the value for MC_EMEM_ADR_CFG_DEV0
@@ -927,7 +955,7 @@ typedef struct NvBootSdramParamsRec
     NvU32 McCifllReqWrlimit;
 
     /// MC arbitration configuration
-    /// 
+    ///
     /// Specifies the value for MC_EMEM_ARB_CFG
     NvU32 McEmemArbCfg;
     /// Specifies the value for MC_EMEM_ARB_OUTSTANDING_REQ
