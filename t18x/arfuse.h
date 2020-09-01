@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2016-2018 NVIDIA Corporation.
+// Copyright (c) 2016 NVIDIA Corporation.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -1062,6 +1062,26 @@
 #define FUSE_PRODUCTION_MODE_0_PRODUCTION_MODE_SW_DEFAULT_MASK                  _MK_MASK_CONST(0x0)
 
 
+// Register FUSE_JTAG_SECUREID_VALID_0
+#define FUSE_JTAG_SECUREID_VALID_0                      _MK_ADDR_CONST(0x104)
+#define FUSE_JTAG_SECUREID_VALID_0_SECURE                       0x0
+#define FUSE_JTAG_SECUREID_VALID_0_SCR                  0
+#define FUSE_JTAG_SECUREID_VALID_0_WORD_COUNT                   0x1
+#define FUSE_JTAG_SECUREID_VALID_0_RESET_VAL                    _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_RESET_MASK                   _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_SW_DEFAULT_VAL                       _MK_MASK_CONST(0x0)
+#define FUSE_JTAG_SECUREID_VALID_0_SW_DEFAULT_MASK                      _MK_MASK_CONST(0x0)
+#define FUSE_JTAG_SECUREID_VALID_0_READ_MASK                    _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_WRITE_MASK                   _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_SHIFT                    _MK_SHIFT_CONST(0)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_FIELD                    _MK_FIELD_CONST(0x1, FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_SHIFT)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_RANGE                    0:0
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_WOFFSET                  0x0
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_DEFAULT                  _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_DEFAULT_MASK                     _MK_MASK_CONST(0x1)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_SW_DEFAULT                       _MK_MASK_CONST(0x0)
+#define FUSE_JTAG_SECUREID_VALID_0_JTAG_SECUREID_VALID_SW_DEFAULT_MASK                  _MK_MASK_CONST(0x0)
+
 
 // Register FUSE_ODM_LOCK_0
 #define FUSE_ODM_LOCK_0                 _MK_ADDR_CONST(0x108)
@@ -1322,6 +1342,26 @@
 
 
 // Reserved address 324 [0x144]
+
+// Register FUSE_FA_0
+#define FUSE_FA_0                       _MK_ADDR_CONST(0x148)
+#define FUSE_FA_0_SECURE                        0x0
+#define FUSE_FA_0_SCR                   0
+#define FUSE_FA_0_WORD_COUNT                    0x1
+#define FUSE_FA_0_RESET_VAL                     _MK_MASK_CONST(0x0)
+#define FUSE_FA_0_RESET_MASK                    _MK_MASK_CONST(0x1)
+#define FUSE_FA_0_SW_DEFAULT_VAL                        _MK_MASK_CONST(0x0)
+#define FUSE_FA_0_SW_DEFAULT_MASK                       _MK_MASK_CONST(0x0)
+#define FUSE_FA_0_READ_MASK                     _MK_MASK_CONST(0x1)
+#define FUSE_FA_0_WRITE_MASK                    _MK_MASK_CONST(0x1)
+#define FUSE_FA_0_FA_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_FA_0_FA_FIELD                      _MK_FIELD_CONST(0x1, FUSE_FA_0_FA_SHIFT)
+#define FUSE_FA_0_FA_RANGE                      0:0
+#define FUSE_FA_0_FA_WOFFSET                    0x0
+#define FUSE_FA_0_FA_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_FA_0_FA_DEFAULT_MASK                       _MK_MASK_CONST(0x1)
+#define FUSE_FA_0_FA_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_FA_0_FA_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
 
 
 // Register FUSE_RESERVED_PRODUCTION_0
@@ -2067,6 +2107,26 @@
 #define FUSE_RESERVED_ODM7_0_RESERVED_ODM7_SW_DEFAULT_MASK                      _MK_MASK_CONST(0x0)
 
 
+// Register FUSE_OBS_DIS_0
+#define FUSE_OBS_DIS_0                  _MK_ADDR_CONST(0x1e8)
+#define FUSE_OBS_DIS_0_SECURE                   0x0
+#define FUSE_OBS_DIS_0_SCR                      0
+#define FUSE_OBS_DIS_0_WORD_COUNT                       0x1
+#define FUSE_OBS_DIS_0_RESET_VAL                        _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_RESET_MASK                       _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_SW_DEFAULT_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_OBS_DIS_0_SW_DEFAULT_MASK                  _MK_MASK_CONST(0x0)
+#define FUSE_OBS_DIS_0_READ_MASK                        _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_WRITE_MASK                       _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_OBS_DIS_SHIFT                    _MK_SHIFT_CONST(0)
+#define FUSE_OBS_DIS_0_OBS_DIS_FIELD                    _MK_FIELD_CONST(0x1, FUSE_OBS_DIS_0_OBS_DIS_SHIFT)
+#define FUSE_OBS_DIS_0_OBS_DIS_RANGE                    0:0
+#define FUSE_OBS_DIS_0_OBS_DIS_WOFFSET                  0x0
+#define FUSE_OBS_DIS_0_OBS_DIS_DEFAULT                  _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_OBS_DIS_DEFAULT_MASK                     _MK_MASK_CONST(0x1)
+#define FUSE_OBS_DIS_0_OBS_DIS_SW_DEFAULT                       _MK_MASK_CONST(0x0)
+#define FUSE_OBS_DIS_0_OBS_DIS_SW_DEFAULT_MASK                  _MK_MASK_CONST(0x0)
+
 
 // Reserved address 492 [0x1ec]
 
@@ -2300,6 +2360,26 @@
 #define FUSE_OPT_Y_COORDINATE_0_OPT_Y_COORDINATE_SW_DEFAULT                     _MK_MASK_CONST(0x0)
 #define FUSE_OPT_Y_COORDINATE_0_OPT_Y_COORDINATE_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
 
+
+// Register FUSE_OPT_SEC_DEBUG_EN_0
+#define FUSE_OPT_SEC_DEBUG_EN_0                 _MK_ADDR_CONST(0x21c)
+#define FUSE_OPT_SEC_DEBUG_EN_0_SECURE                  0x0
+#define FUSE_OPT_SEC_DEBUG_EN_0_SCR                     0
+#define FUSE_OPT_SEC_DEBUG_EN_0_WORD_COUNT                      0x1
+#define FUSE_OPT_SEC_DEBUG_EN_0_RESET_VAL                       _MK_MASK_CONST(0x0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_RESET_MASK                      _MK_MASK_CONST(0x1)
+#define FUSE_OPT_SEC_DEBUG_EN_0_SW_DEFAULT_VAL                  _MK_MASK_CONST(0x0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_SW_DEFAULT_MASK                         _MK_MASK_CONST(0x0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_READ_MASK                       _MK_MASK_CONST(0x1)
+#define FUSE_OPT_SEC_DEBUG_EN_0_WRITE_MASK                      _MK_MASK_CONST(0x1)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_FIELD                  _MK_FIELD_CONST(0x1, FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_SHIFT)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_RANGE                  0:0
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_WOFFSET                        0x0
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_DEFAULT_MASK                   _MK_MASK_CONST(0x1)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_OPT_SEC_DEBUG_EN_0_OPT_SEC_DEBUG_EN_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
 
 
 // Register FUSE_OPT_OPS_RESERVED_0
@@ -2780,6 +2860,26 @@
 
 // Reserved address 660 [0x294]
 
+// Register FUSE_APB2JTAG_DISABLE_0
+#define FUSE_APB2JTAG_DISABLE_0                 _MK_ADDR_CONST(0x298)
+#define FUSE_APB2JTAG_DISABLE_0_SECURE                  0x0
+#define FUSE_APB2JTAG_DISABLE_0_SCR                     0
+#define FUSE_APB2JTAG_DISABLE_0_WORD_COUNT                      0x1
+#define FUSE_APB2JTAG_DISABLE_0_RESET_VAL                       _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_RESET_MASK                      _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_SW_DEFAULT_VAL                  _MK_MASK_CONST(0x0)
+#define FUSE_APB2JTAG_DISABLE_0_SW_DEFAULT_MASK                         _MK_MASK_CONST(0x0)
+#define FUSE_APB2JTAG_DISABLE_0_READ_MASK                       _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_WRITE_MASK                      _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_FIELD                  _MK_FIELD_CONST(0x1, FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_SHIFT)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_RANGE                  0:0
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_WOFFSET                        0x0
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_DEFAULT                        _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_DEFAULT_MASK                   _MK_MASK_CONST(0x1)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_APB2JTAG_DISABLE_0_APB2JTAG_DISABLE_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
 
 // Register FUSE_ODM_INFO_0
 #define FUSE_ODM_INFO_0                 _MK_ADDR_CONST(0x29c)
@@ -3159,6 +3259,48 @@
 #define FUSE_DEBUG_AUTHENTICATION_0_DEBUG_AUTHENTICATION_DEFAULT_MASK                   _MK_MASK_CONST(0x1f)
 #define FUSE_DEBUG_AUTHENTICATION_0_DEBUG_AUTHENTICATION_SW_DEFAULT                     _MK_MASK_CONST(0x0)
 #define FUSE_DEBUG_AUTHENTICATION_0_DEBUG_AUTHENTICATION_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_SECURE_PROVISION_INDEX_0
+#define FUSE_SECURE_PROVISION_INDEX_0                   _MK_ADDR_CONST(0x2e8)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE                    0x0
+#define FUSE_SECURE_PROVISION_INDEX_0_SCR                       0
+#define FUSE_SECURE_PROVISION_INDEX_0_WORD_COUNT                        0x1
+#define FUSE_SECURE_PROVISION_INDEX_0_RESET_VAL                         _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INDEX_0_RESET_MASK                        _MK_MASK_CONST(0xf)
+#define FUSE_SECURE_PROVISION_INDEX_0_SW_DEFAULT_VAL                    _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INDEX_0_SW_DEFAULT_MASK                   _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INDEX_0_READ_MASK                         _MK_MASK_CONST(0xf)
+#define FUSE_SECURE_PROVISION_INDEX_0_WRITE_MASK                        _MK_MASK_CONST(0xf)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_FIELD                      _MK_FIELD_CONST(0xf, FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_SHIFT)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_RANGE                      3:0
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_WOFFSET                    0x0
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_DEFAULT_MASK                       _MK_MASK_CONST(0xf)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INDEX_0_SECURE_PROVISION_INDEX_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_SECURE_PROVISION_INFO_0
+#define FUSE_SECURE_PROVISION_INFO_0                    _MK_ADDR_CONST(0x2ec)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE                     0x0
+#define FUSE_SECURE_PROVISION_INFO_0_SCR                        0
+#define FUSE_SECURE_PROVISION_INFO_0_WORD_COUNT                         0x1
+#define FUSE_SECURE_PROVISION_INFO_0_RESET_VAL                  _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INFO_0_RESET_MASK                         _MK_MASK_CONST(0x3)
+#define FUSE_SECURE_PROVISION_INFO_0_SW_DEFAULT_VAL                     _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INFO_0_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INFO_0_READ_MASK                  _MK_MASK_CONST(0x3)
+#define FUSE_SECURE_PROVISION_INFO_0_WRITE_MASK                         _MK_MASK_CONST(0x3)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_SHIFT                        _MK_SHIFT_CONST(0)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_FIELD                        _MK_FIELD_CONST(0x3, FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_SHIFT)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_RANGE                        1:0
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_WOFFSET                      0x0
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_DEFAULT                      _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_DEFAULT_MASK                 _MK_MASK_CONST(0x3)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_SW_DEFAULT                   _MK_MASK_CONST(0x0)
+#define FUSE_SECURE_PROVISION_INFO_0_SECURE_PROVISION_INFO_SW_DEFAULT_MASK                      _MK_MASK_CONST(0x0)
 
 
 // Register FUSE_OPT_GPU_DISABLE_CP_0
@@ -3922,6 +4064,88 @@
 #define FUSE_EK7_0_EK7_SW_DEFAULT_MASK                  _MK_MASK_CONST(0x0)
 
 
+// Register FUSE_PDK0_0
+#define FUSE_PDK0_0                     _MK_ADDR_CONST(0x3b0)
+#define FUSE_PDK0_0_SECURE                      0x0
+#define FUSE_PDK0_0_SCR                         0
+#define FUSE_PDK0_0_WORD_COUNT                  0x1
+#define FUSE_PDK0_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDK0_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK0_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDK0_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK0_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK0_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK0_0_PDK0_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDK0_0_PDK0_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDK0_0_PDK0_SHIFT)
+#define FUSE_PDK0_0_PDK0_RANGE                  31:0
+#define FUSE_PDK0_0_PDK0_WOFFSET                        0x0
+#define FUSE_PDK0_0_PDK0_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDK0_0_PDK0_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK0_0_PDK0_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK0_0_PDK0_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_PDK1_0
+#define FUSE_PDK1_0                     _MK_ADDR_CONST(0x3b4)
+#define FUSE_PDK1_0_SECURE                      0x0
+#define FUSE_PDK1_0_SCR                         0
+#define FUSE_PDK1_0_WORD_COUNT                  0x1
+#define FUSE_PDK1_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDK1_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK1_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDK1_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK1_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK1_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK1_0_PDK1_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDK1_0_PDK1_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDK1_0_PDK1_SHIFT)
+#define FUSE_PDK1_0_PDK1_RANGE                  31:0
+#define FUSE_PDK1_0_PDK1_WOFFSET                        0x0
+#define FUSE_PDK1_0_PDK1_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDK1_0_PDK1_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK1_0_PDK1_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK1_0_PDK1_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_PDK2_0
+#define FUSE_PDK2_0                     _MK_ADDR_CONST(0x3b8)
+#define FUSE_PDK2_0_SECURE                      0x0
+#define FUSE_PDK2_0_SCR                         0
+#define FUSE_PDK2_0_WORD_COUNT                  0x1
+#define FUSE_PDK2_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDK2_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK2_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDK2_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK2_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK2_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK2_0_PDK2_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDK2_0_PDK2_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDK2_0_PDK2_SHIFT)
+#define FUSE_PDK2_0_PDK2_RANGE                  31:0
+#define FUSE_PDK2_0_PDK2_WOFFSET                        0x0
+#define FUSE_PDK2_0_PDK2_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDK2_0_PDK2_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK2_0_PDK2_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK2_0_PDK2_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_PDK3_0
+#define FUSE_PDK3_0                     _MK_ADDR_CONST(0x3bc)
+#define FUSE_PDK3_0_SECURE                      0x0
+#define FUSE_PDK3_0_SCR                         0
+#define FUSE_PDK3_0_WORD_COUNT                  0x1
+#define FUSE_PDK3_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDK3_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK3_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDK3_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK3_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK3_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK3_0_PDK3_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDK3_0_PDK3_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDK3_0_PDK3_SHIFT)
+#define FUSE_PDK3_0_PDK3_RANGE                  31:0
+#define FUSE_PDK3_0_PDK3_WOFFSET                        0x0
+#define FUSE_PDK3_0_PDK3_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDK3_0_PDK3_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDK3_0_PDK3_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDK3_0_PDK3_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
 
 
 // Register FUSE_KEK00_0
@@ -4175,6 +4399,131 @@
 #define FUSE_KEK23_0_KEK23_SW_DEFAULT                   _MK_MASK_CONST(0x0)
 #define FUSE_KEK23_0_KEK23_SW_DEFAULT_MASK                      _MK_MASK_CONST(0x0)
 
+
+// Register FUSE_OPT_PRIV_SFK_0_0
+#define FUSE_OPT_PRIV_SFK_0_0                   _MK_ADDR_CONST(0x3f0)
+#define FUSE_OPT_PRIV_SFK_0_0_SECURE                    0x0
+#define FUSE_OPT_PRIV_SFK_0_0_SCR                       0
+#define FUSE_OPT_PRIV_SFK_0_0_WORD_COUNT                        0x1
+#define FUSE_OPT_PRIV_SFK_0_0_RESET_VAL                         _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_0_0_RESET_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_0_0_SW_DEFAULT_VAL                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_0_0_SW_DEFAULT_MASK                   _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_0_0_READ_MASK                         _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_0_0_WRITE_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_FIELD                      _MK_FIELD_CONST(0xffffffff, FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_SHIFT)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_RANGE                      31:0
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_WOFFSET                    0x0
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_DEFAULT_MASK                       _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_0_0_OPT_PRIV_SFK_0_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_OPT_PRIV_SFK_1_0
+#define FUSE_OPT_PRIV_SFK_1_0                   _MK_ADDR_CONST(0x3f4)
+#define FUSE_OPT_PRIV_SFK_1_0_SECURE                    0x0
+#define FUSE_OPT_PRIV_SFK_1_0_SCR                       0
+#define FUSE_OPT_PRIV_SFK_1_0_WORD_COUNT                        0x1
+#define FUSE_OPT_PRIV_SFK_1_0_RESET_VAL                         _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_1_0_RESET_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_1_0_SW_DEFAULT_VAL                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_1_0_SW_DEFAULT_MASK                   _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_1_0_READ_MASK                         _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_1_0_WRITE_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_FIELD                      _MK_FIELD_CONST(0xffffffff, FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_SHIFT)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_RANGE                      31:0
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_WOFFSET                    0x0
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_DEFAULT_MASK                       _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_1_0_OPT_PRIV_SFK_1_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_OPT_PRIV_SFK_2_0
+#define FUSE_OPT_PRIV_SFK_2_0                   _MK_ADDR_CONST(0x3f8)
+#define FUSE_OPT_PRIV_SFK_2_0_SECURE                    0x0
+#define FUSE_OPT_PRIV_SFK_2_0_SCR                       0
+#define FUSE_OPT_PRIV_SFK_2_0_WORD_COUNT                        0x1
+#define FUSE_OPT_PRIV_SFK_2_0_RESET_VAL                         _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_2_0_RESET_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_2_0_SW_DEFAULT_VAL                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_2_0_SW_DEFAULT_MASK                   _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_2_0_READ_MASK                         _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_2_0_WRITE_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_FIELD                      _MK_FIELD_CONST(0xffffffff, FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_SHIFT)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_RANGE                      31:0
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_WOFFSET                    0x0
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_DEFAULT_MASK                       _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_2_0_OPT_PRIV_SFK_2_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_OPT_PRIV_SFK_3_0
+#define FUSE_OPT_PRIV_SFK_3_0                   _MK_ADDR_CONST(0x3fc)
+#define FUSE_OPT_PRIV_SFK_3_0_SECURE                    0x0
+#define FUSE_OPT_PRIV_SFK_3_0_SCR                       0
+#define FUSE_OPT_PRIV_SFK_3_0_WORD_COUNT                        0x1
+#define FUSE_OPT_PRIV_SFK_3_0_RESET_VAL                         _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_3_0_RESET_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_3_0_SW_DEFAULT_VAL                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_3_0_SW_DEFAULT_MASK                   _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_3_0_READ_MASK                         _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_3_0_WRITE_MASK                        _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_SHIFT                      _MK_SHIFT_CONST(0)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_FIELD                      _MK_FIELD_CONST(0xffffffff, FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_SHIFT)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_RANGE                      31:0
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_WOFFSET                    0x0
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_DEFAULT                    _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_DEFAULT_MASK                       _MK_MASK_CONST(0xffffffff)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_SW_DEFAULT                 _MK_MASK_CONST(0x0)
+#define FUSE_OPT_PRIV_SFK_3_0_OPT_PRIV_SFK_3_SW_DEFAULT_MASK                    _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_PDI0_0
+#define FUSE_PDI0_0                     _MK_ADDR_CONST(0x400)
+#define FUSE_PDI0_0_SECURE                      0x0
+#define FUSE_PDI0_0_SCR                         0
+#define FUSE_PDI0_0_WORD_COUNT                  0x1
+#define FUSE_PDI0_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDI0_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI0_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDI0_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDI0_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI0_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI0_0_PDI0_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDI0_0_PDI0_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDI0_0_PDI0_SHIFT)
+#define FUSE_PDI0_0_PDI0_RANGE                  31:0
+#define FUSE_PDI0_0_PDI0_WOFFSET                        0x0
+#define FUSE_PDI0_0_PDI0_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDI0_0_PDI0_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI0_0_PDI0_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDI0_0_PDI0_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
+
+
+// Register FUSE_PDI1_0
+#define FUSE_PDI1_0                     _MK_ADDR_CONST(0x404)
+#define FUSE_PDI1_0_SECURE                      0x0
+#define FUSE_PDI1_0_SCR                         0
+#define FUSE_PDI1_0_WORD_COUNT                  0x1
+#define FUSE_PDI1_0_RESET_VAL                   _MK_MASK_CONST(0x0)
+#define FUSE_PDI1_0_RESET_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI1_0_SW_DEFAULT_VAL                      _MK_MASK_CONST(0x0)
+#define FUSE_PDI1_0_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
+#define FUSE_PDI1_0_READ_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI1_0_WRITE_MASK                  _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI1_0_PDI1_SHIFT                  _MK_SHIFT_CONST(0)
+#define FUSE_PDI1_0_PDI1_FIELD                  _MK_FIELD_CONST(0xffffffff, FUSE_PDI1_0_PDI1_SHIFT)
+#define FUSE_PDI1_0_PDI1_RANGE                  31:0
+#define FUSE_PDI1_0_PDI1_WOFFSET                        0x0
+#define FUSE_PDI1_0_PDI1_DEFAULT                        _MK_MASK_CONST(0x0)
+#define FUSE_PDI1_0_PDI1_DEFAULT_MASK                   _MK_MASK_CONST(0xffffffff)
+#define FUSE_PDI1_0_PDI1_SW_DEFAULT                     _MK_MASK_CONST(0x0)
+#define FUSE_PDI1_0_PDI1_SW_DEFAULT_MASK                        _MK_MASK_CONST(0x0)
 
 
 // Register FUSE_ODMID0_0

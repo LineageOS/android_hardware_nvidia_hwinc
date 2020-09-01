@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014-2018 NVIDIA Corporation.  All rights reserved.
+ * Copyright (c) 2014 NVIDIA Corporation.  All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -188,6 +188,12 @@ typedef enum
  */
 #define USBH_DEVICE_CONFIG_0_VBUS_ENABLE_RANGE 8:8
 
+
+/*
+ * Secure Provisioning Fuses
+ */
+#define FUSE_SECURE_PROVISION_INFO_0_KEY_HIDE_RANGE 0:0
+#define FUSE_SECURE_PROVISION_INFO_0_TEST_PART_RANGE 1:1
 
 /*
  * Boot info security fuses, for information on authentication and confidentiality
