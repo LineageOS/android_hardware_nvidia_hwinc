@@ -2034,6 +2034,8 @@
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_RANGE                 1:1
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_WOFFSET                       0x0
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_DEFAULT                       _MK_MASK_CONST(0x0)
+#define TKE_TOP_WDT0_WDTCR_0_TimerSource_MSB                    MK_SHIFT_CONST(3)
+#define TKE_TOP_WDT0_WDTCR_0_TimerSource_LSB                    MK_SHIFT_CONST(0)
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_DEFAULT_MASK                  _MK_MASK_CONST(0x1)
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_SW_DEFAULT                    _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_LocalInterruptStatus_SW_DEFAULT_MASK                       _MK_MASK_CONST(0x0)
@@ -2047,6 +2049,8 @@
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_DEFAULT                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_DEFAULT_MASK                        _MK_MASK_CONST(0x1)
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_SW_DEFAULT                  _MK_MASK_CONST(0x0)
+#define TKE_TOP_WDT0_WDTCR_0_Period_MSB                 MK_SHIFT_CONST(11)
+#define TKE_TOP_WDT0_WDTCR_0_Period_LSB                 MK_SHIFT_CONST(4)
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_PARITY_PROTECTION                   _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_LocalFIQStatus_PLATFORM_DEPENDENT                  _MK_MASK_CONST(0x1)
@@ -2060,6 +2064,8 @@
 #define TKE_TOP_WDT0_WDTSR_0_RemoteInterruptStatus_SW_DEFAULT                   _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_RemoteInterruptStatus_SW_DEFAULT_MASK                      _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_RemoteInterruptStatus_PARITY_PROTECTION                    _MK_MASK_CONST(0x0)
+#define TKE_TOP_WDT0_WDTCR_0_LocalInterruptEnable_MSB                   MK_SHIFT_CONST(12)
+#define TKE_TOP_WDT0_WDTCR_0_LocalInterruptEnable_LSB                   MK_SHIFT_CONST(12)
 #define TKE_TOP_WDT0_WDTSR_0_RemoteInterruptStatus_PLATFORM_DEPENDENT                   _MK_MASK_CONST(0x1)
 
 #define TKE_TOP_WDT0_WDTSR_0_CurrentCount_SHIFT                 _MK_SHIFT_CONST(4)
@@ -2073,6 +2079,7 @@
 #define TKE_TOP_WDT0_WDTSR_0_CurrentCount_PARITY_PROTECTION                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentCount_PLATFORM_DEPENDENT                    _MK_MASK_CONST(0x1)
 
+#define TKE_TOP_WDT0_WDTCR_0_LocalFIQEnable_MSB                 MK_SHIFT_CONST(13)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_SHIFT                       _MK_SHIFT_CONST(12)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_FIELD                       _MK_FIELD_CONST(0x7, TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_SHIFT)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_RANGE                       14:12
@@ -2084,6 +2091,9 @@
 #define TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_PARITY_PROTECTION                   _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentExpirationCount_PLATFORM_DEPENDENT                  _MK_MASK_CONST(0x1)
 
+#define TKE_TOP_WDT0_WDTCR_0_RemoteInterruptEnable_MSB                  MK_SHIFT_CONST(14)
+#define TKE_TOP_WDT0_WDTCR_0_RemoteInterruptEnable_LSB                  MK_SHIFT_CONST(14)
+#define TKE_TOP_WDT0_WDTCR_0_LocalFIQEnable_LSB                 MK_SHIFT_CONST(13)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentError_SHIFT                 _MK_SHIFT_CONST(16)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentError_FIELD                 _MK_FIELD_CONST(0x1, TKE_TOP_WDT0_WDTSR_0_CurrentError_SHIFT)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentError_RANGE                 16:16
@@ -2095,6 +2105,8 @@
 #define TKE_TOP_WDT0_WDTSR_0_CurrentError_PARITY_PROTECTION                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_CurrentError_PLATFORM_DEPENDENT                    _MK_MASK_CONST(0x1)
 
+#define TKE_TOP_WDT0_WDTCR_0_SystemDebugResetEnable_MSB                 MK_SHIFT_CONST(15)
+#define TKE_TOP_WDT0_WDTCR_0_SystemDebugResetEnable_LSB                 MK_SHIFT_CONST(15)
 #define TKE_TOP_WDT0_WDTSR_0_StickyEnabled_SHIFT                        _MK_SHIFT_CONST(17)
 #define TKE_TOP_WDT0_WDTSR_0_StickyEnabled_FIELD                        _MK_FIELD_CONST(0x1, TKE_TOP_WDT0_WDTSR_0_StickyEnabled_SHIFT)
 #define TKE_TOP_WDT0_WDTSR_0_StickyEnabled_RANGE                        17:17
@@ -2106,6 +2118,8 @@
 #define TKE_TOP_WDT0_WDTSR_0_StickyEnabled_PARITY_PROTECTION                    _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTSR_0_StickyEnabled_PLATFORM_DEPENDENT                   _MK_MASK_CONST(0x1)
 
+#define TKE_TOP_WDT0_WDTCR_0_SystemPOResetEnable_MSB                    MK_SHIFT_CONST(16)
+#define TKE_TOP_WDT0_WDTCR_0_SystemPOResetEnable_LSB                    MK_SHIFT_CONST(16)
 #define TKE_TOP_WDT0_WDTSR_0_ErrorForced_SHIFT                  _MK_SHIFT_CONST(18)
 #define TKE_TOP_WDT0_WDTSR_0_ErrorForced_FIELD                  _MK_FIELD_CONST(0x1, TKE_TOP_WDT0_WDTSR_0_ErrorForced_SHIFT)
 #define TKE_TOP_WDT0_WDTSR_0_ErrorForced_RANGE                  18:18
@@ -2131,6 +2145,8 @@
 
 // Register TKE_TOP_WDT0_WDTCMDR_0
 #define TKE_TOP_WDT0_WDTCMDR_0                  _MK_ADDR_CONST(0xb0008)
+#define TKE_TOP_WDT0_WDTCR_0_ChallengeResponseEnable_MSB                        MK_SHIFT_CONST(18)
+#define TKE_TOP_WDT0_WDTCR_0_ChallengeResponseEnable_LSB                        MK_SHIFT_CONST(18)
 #define TKE_TOP_WDT0_WDTCMDR_0_SECURE                   0x0
 #define TKE_TOP_WDT0_WDTCMDR_0_DUAL                     0x0
 #define TKE_TOP_WDT0_WDTCMDR_0_SCR                      WDTSCR0_0
@@ -2144,6 +2160,8 @@
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_SHIFT                       _MK_SHIFT_CONST(0)
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_FIELD                       _MK_FIELD_CONST(0x1, TKE_TOP_WDT0_WDTCMDR_0_StartCounter_SHIFT)
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_RANGE                       0:0
+#define TKE_TOP_WDT0_WDTCR_0_TscReferenceEnable_MSB                     MK_SHIFT_CONST(19)
+#define TKE_TOP_WDT0_WDTCR_0_TscReferenceEnable_LSB                     MK_SHIFT_CONST(19)
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_WOFFSET                     0x0
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_DEFAULT                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_DEFAULT_MASK                        _MK_MASK_CONST(0x1)
@@ -2155,6 +2173,8 @@
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_SHIFT                     _MK_SHIFT_CONST(1)
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_FIELD                     _MK_FIELD_CONST(0x1, TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_SHIFT)
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_RANGE                     1:1
+#define TKE_TOP_WDT0_WDTCR_0_ErrorThreshold_MSB                 MK_SHIFT_CONST(22)
+#define TKE_TOP_WDT0_WDTCR_0_ErrorThreshold_LSB                 MK_SHIFT_CONST(20)
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_WOFFSET                   0x0
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_DEFAULT                   _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_DEFAULT_MASK                      _MK_MASK_CONST(0x1)
@@ -2356,6 +2376,8 @@
 #define TKE_TOP_WDT1_WDTCR_0_LocalFIQEnable_SW_DEFAULT                  _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT1_WDTCR_0_LocalFIQEnable_SW_DEFAULT_MASK                     _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT1_WDTCR_0_LocalFIQEnable_PARITY_PROTECTION                   _MK_MASK_CONST(0x0)
+#define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_MSB                 MK_SHIFT_CONST(0)
+#define TKE_TOP_WDT0_WDTCMDR_0_StartCounter_LSB                 MK_SHIFT_CONST(0)
 #define TKE_TOP_WDT1_WDTCR_0_LocalFIQEnable_PLATFORM_DEPENDENT                  _MK_MASK_CONST(0x1)
 
 #define TKE_TOP_WDT1_WDTCR_0_RemoteInterruptEnable_SHIFT                        _MK_SHIFT_CONST(14)
@@ -2369,6 +2391,8 @@
 #define TKE_TOP_WDT1_WDTCR_0_RemoteInterruptEnable_PARITY_PROTECTION                    _MK_MASK_CONST(0x0)
 #define TKE_TOP_WDT1_WDTCR_0_RemoteInterruptEnable_PLATFORM_DEPENDENT                   _MK_MASK_CONST(0x1)
 
+#define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_MSB                       MK_SHIFT_CONST(1)
+#define TKE_TOP_WDT0_WDTCMDR_0_DisableCounter_LSB                       MK_SHIFT_CONST(1)
 #define TKE_TOP_WDT1_WDTCR_0_SystemDebugResetEnable_SHIFT                       _MK_SHIFT_CONST(15)
 #define TKE_TOP_WDT1_WDTCR_0_SystemDebugResetEnable_FIELD                       _MK_FIELD_CONST(0x1, TKE_TOP_WDT1_WDTCR_0_SystemDebugResetEnable_SHIFT)
 #define TKE_TOP_WDT1_WDTCR_0_SystemDebugResetEnable_RANGE                       15:15
@@ -3390,6 +3414,22 @@ _op_(TKE_TOP_WDT2_WDTFWCR_0)
 #endif
 #ifndef _MK_FIELD_CONST
   #define _MK_FIELD_CONST(_mask_, _shift_) (_MK_MASK_CONST(_mask_) << _MK_SHIFT_CONST(_shift_))
+#endif
+
+#ifndef MK_SHIFT_CONST
+  #define MK_SHIFT_CONST(_constant_) (_constant_ ## U)
+#endif
+#ifndef MK_MASK_CONST
+  #define MK_MASK_CONST(_constant_) (_constant_ ## U)
+#endif
+#ifndef MK_ENUM_CONST
+  #define MK_ENUM_CONST(_constant_) (_constant_ ## U)
+#endif
+#ifndef MK_ADDR_CONST
+  #define MK_ADDR_CONST(_constant_) (_constant_ ## U)
+#endif
+#ifndef MK_FIELD_CONST
+  #define MK_FIELD_CONST(_mask_, _shift_) (MK_MASK_CONST(_mask_) <<  _shift_)
 #endif
 
 #endif // ifndef ___ARTKE_TOP_H_INC_
