@@ -36,8 +36,8 @@
 
 /* CCPLEX Mailbox */
 #define MBOX_AON_CCPLEX_UART	1
-#define MBOX_AON_CCPLEX_IVC_TX	2
-#define MBOX_AON_CCPLEX_IVC_RX	3
+#define MBOX_AON_CCPLEX_IVC_TX	4
+#define MBOX_AON_CCPLEX_IVC_RX	5
 
 /* PSC Mailbox */
 #define MBOX_AON_PSC_UART		2

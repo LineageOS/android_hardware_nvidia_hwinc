@@ -375,5 +375,11 @@
 #define CLK_RST_CONTROLLER_CLK_SOURCE_I2C7_0_I2C7_CLK_SRC_LSB                           MK_SHIFT_CONST(29)
 #define CLK_RST_CONTROLLER_RST_DEV_I2C7_0                                               MK_ADDR_CONST(0x8f0000)
 #define CLK_RST_CONTROLLER_RST_DEV_DCE_DMA_0                                            MK_ADDR_CONST(0x1700024)
+#define CLK_RST_CONTROLLER_CLK_OUT_ENB_UARTC_0_CLK_ENB_UARTC_LSB                        MK_SHIFT_CONST(0)
+#define CLK_RST_CONTROLLER_CLK_OUT_ENB_UARTC_0_CLK_ENB_UARTC_MSB                        MK_SHIFT_CONST(0)
+#define CLK_RST_CONTROLLER_CLK_OUT_ENB_UARTC_0_CLK_ENB_UARTC_ENABLE                     MK_ENUM_CONST(1)
+#define CLK_RST_CONTROLLER_RST_DEV_UARTC_0_SWR_UARTC_RST_LSB                            MK_SHIFT_CONST(0)
+#define CLK_RST_CONTROLLER_RST_DEV_UARTC_0_SWR_UARTC_RST_MSB                            MK_SHIFT_CONST(0)
+#define CLK_RST_CONTROLLER_RST_DEV_UARTC_0_SWR_UARTC_RST_DISABLE                        MK_ENUM_CONST(0)
 
 #endif /* ARCLK_RST_H */
